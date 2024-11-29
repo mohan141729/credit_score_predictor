@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: credit-score-app
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    branches: 
+      - main
+    autoDeploy: true
+    region: oregon
